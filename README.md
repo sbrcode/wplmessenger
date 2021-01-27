@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### The functionalities are :
+• message sending
+• display of messages according to a thread system (n-level discussion thread) visible in the interface
+• formatting of messages by Markdown, for which you will have implemented some rules
+• listing of messages visible to a recipient in chronological order or by discussion thread

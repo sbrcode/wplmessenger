@@ -1,3 +1,9 @@
+# The functionalities are :
+* message sending
+* display of messages according to a thread system (n-level discussion thread) visible in the interface
+* formatting of messages by Markdown, for which you will have implemented some rules
+* listing of messages visible to a recipient in chronological order or by discussion thread
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

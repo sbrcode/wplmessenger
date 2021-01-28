@@ -16,19 +16,16 @@ export default function AppFunction() {
     setAllPosts((prev) => [newPost, ...prev]);
     setNewPost({});
   };
-  const handleDelete = (postIdToRemove) => {
-    setAllPosts((prev) => prev.filter((post) => post.id !== postIdToRemove));
-  };
 
   return (
-    <main>
-      <h1>Write your new message</h1>
-      <NewPost
-        newPost={newPost}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
-      <PostsList allPosts={allPosts} handleDelete={handleDelete} />
-    </main>
+    <div>
+      <h2>Write your new message</h2>
+        <NewPost
+            newPost={newPost}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+        />
+        <PostsList allPosts={allPosts} id={Date.now()} title={newPost.title} />
+    </div>
   );
 }

@@ -5,21 +5,14 @@ export default function NewPost({ newPost, handleChange, handleSubmit }) {
     <form onSubmit={handleSubmit}>
       <input
         name="title"
-        placeholder="New Post"
+        placeholder="..."
         value={newPost.title || ""}
         onChange={handleChange}
       />
-      {!newPost.title ? null : (
-        <>
-          <textarea
-            name="description"
-            placeholder="Details..."
-            value={newPost.description || ""}
-            onChange={handleChange}
-          />
-          <button type="submit">New Post</button>
-        </>
-      )}
+      {!newPost.title
+        ? null
+        : (<button type="submit">Post</button>)
+      }
     </form>
   );
 }

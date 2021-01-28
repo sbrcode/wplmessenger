@@ -22,7 +22,7 @@ export default function AppFunction() {
 
   return (
     <main>
-      <h1>Posts</h1>
+      <h1>Write your new message</h1>
       <NewPost
         newPost={newPost}
         handleChange={handleChange}

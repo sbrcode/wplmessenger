@@ -1,5 +1,12 @@
 import React from 'react';
 
+/**
+ * Build new message with an ID, choice of mode and write content.
+ *
+ * @param  {Object} `message`
+ * @param  {Method} `handleChange`
+ * @param  {Method} `handleSubmit`
+ */
 export default function NewMessage({ message, handleChange, handleSubmit }) {
     return (
         <form onSubmit={handleSubmit}>

@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * Generate threads. Print message id, mode and content.
+ *
+ * @param  {List} `allMessages`
+ */
 export default function MessagesList({ allMessages }) {
   return (
     <ul>

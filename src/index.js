@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Message } from "./Container/Message";
+import { AppMessage } from "./Container/AppMessage";
 import { NavBar } from './navbar';
 
 ReactDOM.render(
   <div>
     <NavBar />
-    <Message />
+    <AppMessage />
   </div>, 
 	document.getElementById('root')
 );

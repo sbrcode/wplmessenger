@@ -2,7 +2,7 @@ import React from 'react';
 
 export class NavBar extends React.Component {
     render() {
-        const pages = ['post', ' list'];
+        const pages = ['post', 'list'];
         const navLinks = pages.map(page => {
           return (
             <a href={'/' + page} key={page}>
@@ -10,7 +10,6 @@ export class NavBar extends React.Component {
             </a>
           )
         });
-    
         return <nav>{navLinks}</nav>;
-      }
+    }
 }

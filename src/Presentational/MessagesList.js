@@ -1,4 +1,9 @@
 import React from 'react';
+import { Remarkable } from 'remarkable';    //this library is a markdown parser
+
+const md = new Remarkable({
+  html: true                                //default value is false => enables html tags
+});
 
 /**
  * Generate threads. Print message id, mode and content.
@@ -10,9 +15,7 @@ export default function MessagesList({ allMessages }) {
     <ul>
       {allMessages.map(({ mode, content, id }) => (
         <li key={id}>
-          {/* {mode === 'private' ? null :  */}
-            <p>{id} : {mode} : {content}</p>
-          {/* } */}
+            <div>{id} :: {mode} <p dangerouslySetInnerHTML={{__html: md.render(content)}}></p></div>
         </li>
       ))}
     </ul>

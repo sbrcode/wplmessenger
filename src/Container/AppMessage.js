@@ -13,7 +13,7 @@ export class AppMessage extends React.Component {
         message: {
           mode: 'public',
           content: '',
-          id: ''
+          id: null
         },
         allMessages: []
       };
@@ -39,7 +39,8 @@ export class AppMessage extends React.Component {
         allMessages: [prevState.message, ...prevState.allMessages],
         message: {
           mode: this.state.message.mode,
-          content: ''
+          content: '',
+          id: null
         }
       }));
     }

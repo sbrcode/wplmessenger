@@ -14,10 +14,10 @@ export default function MessagesList({ allMessages }) {
   return (
     <ul>
       {allMessages.map(({ mode, content, id }) => (
-        content !== '' &&
-        <li key={id}>
-            <div>{id} :: {mode} <p dangerouslySetInnerHTML={{__html: md.render(content)}}></p></div>
-        </li>
+        !content ? null :
+          <li key={id}>
+              <div>{id} :: {mode} <p dangerouslySetInnerHTML={{__html: md.render(content)}}></p></div>
+          </li>
       ))}
     </ul>
   );

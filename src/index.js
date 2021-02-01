@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppMessage } from "./Container/AppMessage";
+import { AppMessage } from './Container/AppMessage';
 import { NavBar } from './navbar';
 
 ReactDOM.render(

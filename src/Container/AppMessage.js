@@ -1,6 +1,6 @@
 import React from 'react';
-import MessagesList from "../Presentational/MessagesList";
-import NewMessage from "../Presentational/NewMessage";
+import MessagesList from '../Presentational/MessagesList';
+import NewMessage from '../Presentational/NewMessage';
 
 /**
  * React Class. description of the object message and different methods.

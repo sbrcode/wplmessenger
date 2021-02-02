@@ -1,8 +1,9 @@
 import React from 'react';
-import { Remarkable } from 'remarkable';    //this library is a markdown parser
+import { Remarkable } from 'remarkable';    // this library is a markdown parser.
+                                            // https://github.com/jonschlinkert/remarkable
 
 const md = new Remarkable({
-  html: true                                //default value is false => enables html tags
+  html: true                                // Default value is false => enables html tags transformation.
 });
 
 /**

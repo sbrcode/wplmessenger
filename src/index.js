@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AppMessage } from './Container/AppMessage';
 import { AppThreads } from './Container/AppThreads';
 
+/**
+ * Creates routes and links. Uses tags from react-router-dom library.
+ *
+ */
 export default function App() {
   return (
     <Router>
@@ -14,7 +18,7 @@ export default function App() {
               <Link to="/">New message</Link>
             </li>
             <li>
-              <Link to="/threads">Threads</Link>
+              <Link to="/threads">List of Threads</Link>
             </li>
           </ul>
         </nav>
@@ -34,7 +38,7 @@ export default function App() {
 function Home() {
   return (
     <div>
-      <h3>Welcome and write your new message !</h3>
+      <h2>Welcome and type your new message !</h2>
       <AppMessage />
     </div>
   )
@@ -43,8 +47,7 @@ function Home() {
 function Threads() {
   return (
     <div>
-    <h3>List of Threads</h3>
-    <AppThreads />
+      <AppThreads />
     </div>
   )
 }

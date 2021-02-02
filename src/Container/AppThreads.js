@@ -4,7 +4,7 @@ export class AppThreads extends React.Component {
     render() {
         return (
             <div>
-                Hello Fred
+                {/* waiting for backend... */}
             </div>
         );
     }

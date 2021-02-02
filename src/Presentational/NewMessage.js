@@ -11,11 +11,12 @@ export default function NewMessage({ message, handleChange, handleSubmit }) {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Mode
-        <select name="mode" value={message.mode} onChange={handleChange}>
-          <option value="public">public</option>
-          <option value="private">private</option>
-        </select>
+        <h4>Mode
+          <select name="mode" value={message.mode} onChange={handleChange}>
+            <option value="public">public</option>
+            <option value="private">private</option>
+          </select>
+        </h4>
       </label>
       <br />
       <label>

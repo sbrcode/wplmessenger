@@ -4,11 +4,15 @@ import NewMessage from '../Presentational/NewMessage';
 
 /**
  * React Class. description of the object message and different methods.
+ * 
+ * @param  {Function} `handleChange`
+ * @param  {Function} `handleSubmit`
  */
 export class AppMessage extends React.Component {
 
     constructor(props) {
       super(props);
+      // 2 states. one message is an object. all messages is an array of objects.
       this.state = {
         message: {
           mode: 'public',
@@ -21,6 +25,7 @@ export class AppMessage extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // triggers when mode or text field are updated
     handleChange({ target }) {
       const { name, value } = target;
       this.setState((prevState) => ({
@@ -33,6 +38,7 @@ export class AppMessage extends React.Component {
       }));
     }
 
+    // triggers when 'Post' button is pressed.
     handleSubmit(event) {
       event.preventDefault();
       this.setState((prevState) => ({

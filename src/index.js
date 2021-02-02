@@ -15,7 +15,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">New message</Link>
+              <Link to="/">New Message</Link>
             </li>
             <li>
               <Link to="/threads">List of Threads</Link>

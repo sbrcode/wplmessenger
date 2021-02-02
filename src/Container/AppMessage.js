@@ -7,6 +7,7 @@ import NewMessage from '../Presentational/NewMessage';
  * 
  * @param  {Function} `handleChange`
  * @param  {Function} `handleSubmit`
+ * @param  {Function} `handleFilter`
  */
 export class AppMessage extends React.Component {
 
@@ -19,10 +20,12 @@ export class AppMessage extends React.Component {
           content: '',
           id: null
         },
-        allMessages: []
+        allMessages: [],
+        filterText: ''
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleFilter = this.handleFilter.bind(this);
     }
 
     // triggers when mode or text field are updated
@@ -51,6 +54,13 @@ export class AppMessage extends React.Component {
       }));
     }
 
+    // triggers when search bar completed.
+    handleFilter(event) {
+      this.setState({
+        filterText: event.target.value,
+      })
+    }
+
     render() {
       return (
         <div>
@@ -62,6 +72,8 @@ export class AppMessage extends React.Component {
           <br />
           <MessagesList
             allMessages={this.state.allMessages}
+            filterText={this.state.filterText}
+            handleFilter={this.handleFilter}
           />
         </div>
       );

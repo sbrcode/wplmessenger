@@ -8,18 +8,30 @@ const md = new Remarkable({
 
 /**
  * Generate threads. Print message id, mode and content.
+ * Appears only if content completed. Can checks filterText, as soon as 2 messages are printed
  *
  * @param  {List} `allMessages`
+ * @param  {String} `filterText`
+ * @param  {Method} `handleFilter`
  */
-export default function MessagesList({ allMessages }) {
+export default function MessagesList({ allMessages, filterText, handleFilter }) {
   return (
-    <ul>
-      {allMessages.map(({ mode, content, id }) => (
-        !content ? null :
-          <li key={id}>
-              <div>{id} :: {mode} <p dangerouslySetInnerHTML={{__html: md.render(content)}}></p></div>
-          </li>
-      ))}
-    </ul>
+    <div>
+      {allMessages.length < 2 ? null :
+        <form>
+          <input type="text" placeholder="Search..." value={filterText} onChange={handleFilter} />
+        </form>
+      }
+      <ul>
+        {allMessages.map(({ mode, content, id }) => (
+          content.includes(filterText) ?
+            !content ? null :
+              <li key={id}>
+                  <div>{id} :: {mode} <p dangerouslySetInnerHTML={{__html: md.render(content)}}></p></div>
+              </li>
+            : null
+        ))}
+      </ul>
+    </div>
   );
 }
